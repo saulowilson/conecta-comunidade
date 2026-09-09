@@ -1,0 +1,25 @@
+[
+  {
+    "file": "index.html",
+    "messages": []
+  },
+  {
+    "file": "projetos.html",
+    "messages": []
+  },
+  {
+    "file": "cadastro.html",
+    "messages": [
+      {
+        "type": "error",
+        "lastLine": 29,
+        "lastColumn": 187,
+        "firstColumn": 96,
+        "message": "Bad value “street-address” for attribute “autocomplete” on element “input”: The autofill field name “street-address” is not allowed in this context.",
+        "extract": "o)</label><input id=\"endereco\" name=\"endereco\" autocomplete=\"street-address\" required maxlength=\"160\"></div>",
+        "hiliteStart": 10,
+        "hiliteLength": 92
+      }
+    ]
+  }
+]
