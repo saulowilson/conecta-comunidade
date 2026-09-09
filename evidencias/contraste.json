@@ -1,0 +1,51 @@
+[
+  {
+    "uso": "texto",
+    "texto": "#102b43",
+    "fundo": "#f3f7fa",
+    "razao": 13.46,
+    "atendeAAtextoNormal": true
+  },
+  {
+    "uso": "texto secundário",
+    "texto": "#40576b",
+    "fundo": "#f3f7fa",
+    "razao": 6.98,
+    "atendeAAtextoNormal": true
+  },
+  {
+    "uso": "botão verde",
+    "texto": "#ffffff",
+    "fundo": "#126346",
+    "razao": 7.24,
+    "atendeAAtextoNormal": true
+  },
+  {
+    "uso": "botão azul",
+    "texto": "#ffffff",
+    "fundo": "#124b7a",
+    "razao": 9.08,
+    "atendeAAtextoNormal": true
+  },
+  {
+    "uso": "erro",
+    "texto": "#a1232e",
+    "fundo": "#ffffff",
+    "razao": 7.51,
+    "atendeAAtextoNormal": true
+  },
+  {
+    "uso": "badge",
+    "texto": "#124b7a",
+    "fundo": "#dcebf4",
+    "razao": 7.45,
+    "atendeAAtextoNormal": true
+  },
+  {
+    "uso": "status",
+    "texto": "#124c36",
+    "fundo": "#e1f1e8",
+    "razao": 8.5,
+    "atendeAAtextoNormal": true
+  }
+]

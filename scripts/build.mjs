@@ -1,4 +1,5 @@
-import { readFile, writeFile, mkdir, cp, rm, realpath } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, cp, rm, realpath, readdir } from 'node:fs/promises';
+import { transform } from 'esbuild';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
@@ -23,5 +24,13 @@ for (const arquivo of ['index.html', 'projetos.html', 'cadastro.html', 'app.html
 }
 await cp(path.join(raiz, 'assets'), path.join(destino, 'assets'), { recursive: true });
 const css = await readFile(path.join(raiz, 'assets/css/styles.css'), 'utf8');
-await writeFile(path.join(destino, 'assets/css/styles.css'), css.replace(/\s+/g, ' ').replace(/\s*([{};])\s*/g, '$1').trim());
+await writeFile(path.join(destino, 'assets/css/styles.css'), (await transform(css, { loader: 'css', minify: true })).code);
+for (const arquivo of await readdir(path.join(destino, 'assets/js'))) {
+  if (!arquivo.endsWith('.js')) continue;
+  const caminho = path.join(destino, 'assets/js', arquivo);
+  const codigo = await readFile(caminho, 'utf8');
+  const resultado = await transform(codigo, { loader: 'js', format: 'esm', target: 'es2022', minify: true, legalComments: 'none' });
+  await writeFile(caminho, resultado.code);
+}
+await writeFile(path.join(destino, '.nojekyll'), '');
 console.log('Build concluído em dist; templates gerados a partir das páginas HTML.');
