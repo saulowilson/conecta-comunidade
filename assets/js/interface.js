@@ -34,7 +34,16 @@ export function iniciarInterface() {
   const aviso = document.createElement('button');
   aviso.type = 'button';
   aviso.textContent = 'Como funciona a demonstração';
-  lista.append(inicio, aviso);
+  const contraste = document.createElement('button');
+  contraste.type = 'button';
+  contraste.textContent = 'Alto contraste';
+  contraste.setAttribute('aria-pressed', 'false');
+  contraste.addEventListener('click', () => {
+    const ativo = contraste.getAttribute('aria-pressed') !== 'true';
+    contraste.setAttribute('aria-pressed', String(ativo));
+    document.documentElement.dataset.contraste = String(ativo);
+  });
+  lista.append(inicio, aviso, contraste);
   detalhes.append(sumario, lista);
   nav.append(detalhes);
   const dialog = document.createElement('dialog');

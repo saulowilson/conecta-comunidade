@@ -1,5 +1,10 @@
 # Histórico de versões
 
+## 1.1.0 — 2026-09-09
+
+- Acrescenta controle de alto contraste no submenu, com estado ARIA, cores e bordas reforçadas.
+- Mantém as funcionalidades anteriores; a alteração compatível incrementa a versão minor.
+
 ## 1.0.0 — 2026-09-09
 
 Primeira entrega acadêmica da Conecta Comunidade, ONG fictícia de inclusão digital.

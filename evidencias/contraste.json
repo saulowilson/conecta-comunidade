@@ -47,5 +47,12 @@
     "fundo": "#e1f1e8",
     "razao": 8.5,
     "atendeAAtextoNormal": true
+  },
+  {
+    "uso": "texto em alto contraste",
+    "texto": "#000000",
+    "fundo": "#ffffff",
+    "razao": 21,
+    "atendeAAtextoNormal": true
   }
 ]
