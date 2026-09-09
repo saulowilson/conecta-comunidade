@@ -106,3 +106,9 @@ dialog::backdrop { background: #102b4399; }
 @media (max-width: 600px) { .site-header { align-items: flex-start; flex-direction: column; gap: 1rem; } .form-grid { grid-template-columns: 1fr; } .closing { padding: 1.5rem; } .menu-toggle { display: inline-block; font: inherit; color: var(--ink); background: white; border: 1px solid var(--line); padding: .75rem; border-radius: .5rem; } nav[data-pronto='true'] { display: none; width: 100%; } nav.is-open { display: flex; flex-direction: column; } .dropdown-content { position: static; width: 100%; box-shadow: none; } }
 @media (max-width: 400px) { main, .site-header { padding: 1rem; } nav { gap: .75rem; } fieldset { padding: 1rem; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }
+:root[data-contraste='true'] { --ink: #000000; --muted: #000000; --canvas: #ffffff; --paper: #ffffff; --primary: #000080; --primary-hover: #000000; --action: #000000; --action-hover: #222222; --line: #000000; --danger: #800000; }
+:root[data-contraste='true'] :focus-visible { outline: 3px solid #800080; outline-offset: 4px; }
+:root[data-contraste='true'] input, :root[data-contraste='true'] select, :root[data-contraste='true'] textarea { border: 2px solid #000000; }
+:root[data-contraste='true'] .badge, :root[data-contraste='true'] .project:focus-within, :root[data-contraste='true'] [role='status']:not(:empty) { background: #ffffff; color: #000000; border: 2px solid #000000; }
+:root[data-contraste='true'] dialog, :root[data-contraste='true'] .dropdown-content { background: #ffffff; border: 2px solid #000000; }
+:root[data-contraste='true'] .site-footer a { color: #ffffff; }

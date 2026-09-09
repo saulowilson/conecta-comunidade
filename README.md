@@ -46,6 +46,8 @@ As rotas são `#/inicio`, `#/projetos` e `#/cadastro`. A rota de cadastro aceita
 
 Inclui idioma do documento, títulos hierárquicos, landmarks, link de pular ao conteúdo, rótulos associados, fieldset/legend, descrições de campos, foco visível, aria-current, mensagens de erro e região de status. Menus funcionam por teclado; o modal usa dialog nativo. O CSS respeita prefers-reduced-motion.
 
+Em “Sobre o projeto”, o botão “Alto contraste” alterna uma paleta com texto preto sobre branco, bordas reforçadas e links azul-escuros. O botão informa o estado por `aria-pressed`. A escolha permanece durante a navegação da SPA, sem salvar dados, e é reiniciada ao carregar outra página completa.
+
 Foram inspecionadas as telas no Chrome em desktop e em 390 × 844. O menu mobile abre e fecha ao navegar. O modal fecha por Escape e devolve o foco ao botão de origem. As capturas estão em `evidencias/`. Validação de HTML e esses testes pontuais não comprovam conformidade integral com WCAG; a revisão com leitor de tela e a auditoria completa continuam recomendadas.
 
 ## Validação
